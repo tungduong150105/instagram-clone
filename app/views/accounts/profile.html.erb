@@ -1,0 +1,43 @@
+<div class="container mt-3">
+
+  <div class="grid grid-cols-3 gap-3 mb-6">
+    <div class="col-span-1 flex justify-center">
+      <%= image_tag @account.image.url, width: "200px", class: "profile-Avatar" %>
+    </div>
+    <div class="col-span-2">
+      <div class="flex items-center mb-3 gap-3">
+        <h1><%= @account.full_name %></h1>
+        <div class="flex-col">
+          <%= link_to "Edit Profile",
+          edit_account_registration_path,
+          class: "bg-gray-500 ring-1 rounded-md px-3 py-2 text-white" %>
+        </div>
+      </div>
+      <div class="flex gap-3 mb-3">
+        <div>
+          <%= @account.posts.count %>
+          posts
+        </div>
+        <div>
+          <%= @account.total_followers %>
+          followers
+        </div>
+        <div>
+          <%= @account.total_following %>
+          following
+        </div>
+      </div>
+      <p><%= @account.full_name %></p>
+      <p><%= @account.description %></p>
+      <p><%= link_to @account.website if @account.website.present? %></p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 mt-5">
+    <% @posts.each do |post| %>
+      <div class="mx-3">
+        <%= image_tag post.image.url %>
+      </div>
+    <% end %>
+  </div>
+</div>

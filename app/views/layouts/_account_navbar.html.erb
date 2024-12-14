@@ -1,0 +1,19 @@
+<div class="sm:ml-6 sm:block">
+  <div class="flex space-x-4">
+    <%= link_to "Dashboard",
+    dashboard_path,
+    class:
+      "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
+    <%= link_to "New Post",
+    new_post_path,
+    class:
+      "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
+    <%= link_to "My Profile",
+    profile_path(current_account.username),
+    class:
+      "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
+    <%= link_to "Sign Out",
+    destroy_account_session_path,
+    class:
+      "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
+  </div>
