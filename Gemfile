@@ -14,6 +14,13 @@ gem 'sprockets-rails'
 # Postgres Databse
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
+# Upload file
+gem 'carrierwave', '~> 3.0'
+gem 'fog', '~> 1.38'
+
+# Resize Img
+gem 'mini_magick'
+
 # User Auth
 gem 'devise'
 
@@ -62,6 +69,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
+  gem 'figaro'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -75,4 +83,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem "tailwindcss-rails", "~> 3.0"
+gem 'tailwindcss-rails', '~> 3.0'
